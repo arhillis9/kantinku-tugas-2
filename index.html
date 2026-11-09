@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="KantinKu — halaman pemesanan makanan kampus dengan menu, keranjang, dan form masuk."
+    >
+    <title>KantinKu — Pesan Makanan Kampus</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <a class="lewati" href="#konten">Lewati ke konten utama</a>
+
+    <!-- Header: merek, navigasi utama, dan tombol menu ponsel -->
+    <header class="situs-header">
+      <div class="wadah header-dalam">
+        <a class="merek" href="#" title="Kembali ke atas">
+          <span class="merek-ikon" aria-hidden="true">K</span>
+          <span>KantinKu</span>
+        </a>
+
+        <button
+          id="tombol-menu"
+          class="tombol-menu"
+          type="button"
+          aria-expanded="false"
+          aria-controls="menu-utama"
+        >
+          <span aria-hidden="true">☰</span>
+          <span>Menu</span>
+        </button>
+
+        <nav id="menu-utama" class="navigasi" aria-label="Menu utama">
+          <ul>
+            <li><a href="#menu">Menu</a></li>
+            <li>
+              <a href="#keranjang">
+                Keranjang
+                <span id="lencana-keranjang" class="lencana" hidden>0</span>
+              </a>
+            </li>
+            <li><a href="#masuk">Masuk</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="konten">
+      <!-- Hero: pengantar singkat dan ajakan melihat menu -->
+      <section class="hero" aria-labelledby="judul-hero">
+        <div class="wadah hero-dalam">
+          <div class="hero-teks">
+            <p class="eyebrow">Kantin kampus, tanpa antre</p>
+            <h1 id="judul-hero">Makan enak, <span>pesan dari meja.</span></h1>
+            <p class="hero-deskripsi">
+              Pilih menu favoritmu, masukkan ke keranjang, dan ambil pesanan
+              tanpa harus berdiri lama di antrean.
+            </p>
+            <div class="hero-aksi">
+              <a class="tombol tombol-utama" href="#menu">Lihat menu</a>
+              <a class="tombol tombol-sekunder" href="#masuk">Masuk akun</a>
+            </div>
+          </div>
+
+          <div class="hero-kartu" aria-hidden="true">
+            <div class="hero-kartu-atas">
+              <span>Pesanan hari ini</span>
+              <span class="hero-status">Siap</span>
+            </div>
+            <div class="hero-menu">
+              <span class="hero-emoji">🍗</span>
+              <div>
+                <strong>Nasi Ayam</strong>
+                <small>Rp18.000</small>
+              </div>
+            </div>
+            <div class="hero-menu">
+              <span class="hero-emoji">🍜</span>
+              <div>
+                <strong>Mi Goreng</strong>
+                <small>Rp15.000</small>
+              </div>
+            </div>
+            <div class="hero-menu">
+              <span class="hero-emoji">🧋</span>
+              <div>
+                <strong>Es Teh</strong>
+                <small>Rp5.000</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Menu: kartu produk dan tombol tambah ke keranjang -->
+      <section id="menu" class="bagian" aria-labelledby="judul-menu">
+        <div class="wadah">
+          <div class="bagian-kepala">
+            <div>
+              <p class="eyebrow">Menu favorit</p>
+              <h2 id="judul-menu">Pilih makananmu</h2>
+            </div>
+            <p class="bagian-catatan">
+              Harga sudah termasuk pajak. Klik tambah untuk memasukkan ke
+              keranjang.
+            </p>
+          </div>
+
+          <div class="daftar-produk">
+            <article class="kartu-produk">
+              <div class="kartu-gambar" aria-hidden="true">🍗</div>
+              <div class="kartu-isi">
+                <div class="kartu-judul">
+                  <h3>Nasi Ayam</h3>
+                  <p class="harga">Rp18.000</p>
+                </div>
+                <p class="kartu-deskripsi">
+                  Ayam bakar dengan sambal matah dan nasi hangat.
+                </p>
+                <button
+                  class="tombol tombol-utama tambah"
+                  type="button"
+                  data-id="nasi-ayam"
+                  data-nama="Nasi Ayam"
+                  data-harga="18000"
+                  aria-label="Tambah Nasi Ayam ke keranjang"
+                >
+                  Tambah
+                </button>
+              </div>
+            </article>
+
+            <article class="kartu-produk">
+              <div class="kartu-gambar" aria-hidden="true">🍜</div>
+              <div class="kartu-isi">
+                <div class="kartu-judul">
+                  <h3>Mi Goreng</h3>
+                  <p class="harga">Rp15.000</p>
+                </div>
+                <p class="kartu-deskripsi">
+                  Mi goreng dengan telur mata sapi dan sayuran segar.
+                </p>
+                <button
+                  class="tombol tombol-utama tambah"
+                  type="button"
+                  data-id="mi-goreng"
+                  data-nama="Mi Goreng"
+                  data-harga="15000"
+                  aria-label="Tambah Mi Goreng ke keranjang"
+                >
+                  Tambah
+                </button>
+              </div>
+            </article>
+
+            <article class="kartu-produk">
+              <div class="kartu-gambar" aria-hidden="true">🧋</div>
+              <div class="kartu-isi">
+                <div class="kartu-judul">
+                  <h3>Es Teh</h3>
+                  <p class="harga">Rp5.000</p>
+                </div>
+                <p class="kartu-deskripsi">
+                  Teh manis dingin yang menyegarkan, cocok untuk siang hari.
+                </p>
+                <button
+                  class="tombol tombol-utama tambah"
+                  type="button"
+                  data-id="es-teh"
+                  data-nama="Es Teh"
+                  data-harga="5000"
+                  aria-label="Tambah Es Teh ke keranjang"
+                >
+                  Tambah
+                </button>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Keranjang: daftar item, total, dan aksi pesanan -->
+      <section
+        id="keranjang"
+        class="bagian bagian-keranjang"
+        aria-labelledby="judul-keranjang"
+      >
+        <div class="wadah keranjang-tata-letak">
+          <div class="keranjang-panel">
+            <div class="bagian-kepala">
+              <div>
+                <p class="eyebrow">Pesananmu</p>
+                <h2 id="judul-keranjang">Keranjang</h2>
+              </div>
+              <p class="keranjang-ringkas">
+                <span id="jumlah-keranjang">0</span> item ·
+                <strong id="total">Rp0</strong>
+              </p>
+            </div>
+
+            <p id="keranjang-kosong" class="keranjang-kosong">
+              Keranjang masih kosong. Tambahkan menu di atas.
+            </p>
+            <ul
+              id="daftar-keranjang"
+              class="daftar-keranjang"
+              aria-label="Isi keranjang"
+              hidden
+            ></ul>
+
+            <div class="keranjang-aksi">
+              <button
+                id="kosongkan-keranjang"
+                class="tombol tombol-bahaya"
+                type="button"
+                disabled
+              >
+                Kosongkan
+              </button>
+              <button
+                id="simpan-pesanan"
+                class="tombol tombol-utama"
+                type="button"
+                aria-busy="false"
+                disabled
+              >
+                Simpan pesanan
+              </button>
+            </div>
+            <p id="status-keranjang" class="status" role="status" aria-live="polite"></p>
+          </div>
+
+          <aside class="info-panel" aria-labelledby="judul-info">
+            <h2 id="judul-info">Cara ambil pesanan</h2>
+            <ol class="langkah">
+              <li><span aria-hidden="true">1</span> Pilih menu dan simpan pesanan.</li>
+              <li><span aria-hidden="true">2</span> Tunjukkan nomor pesanan di kasir.</li>
+              <li><span aria-hidden="true">3</span> Ambil pesanan saat status siap.</li>
+            </ol>
+            <p class="info-catatan">Pesanan biasanya siap dalam 10–15 menit.</p>
+          </aside>
+        </div>
+      </section>
+
+      <!-- Form masuk: validasi email dan password -->
+      <section id="masuk" class="bagian" aria-labelledby="judul-masuk">
+        <div class="wadah masuk-tata-letak">
+          <div>
+            <p class="eyebrow">Akun</p>
+            <h2 id="judul-masuk">Masuk untuk melihat riwayat pesanan</h2>
+            <p class="bagian-catatan">
+              Belum punya akun? Untuk demo ini, gunakan email apa pun yang valid
+              dan password minimal 8 karakter.
+            </p>
+          </div>
+
+          <form id="form-masuk" class="form-masuk" novalidate>
+            <div class="kolom">
+              <label for="email">Email</label>
+              <input
+                id="email"
+                name="email"
+                type="email"
+                autocomplete="email"
+                required
+                aria-describedby="galat-email"
+              >
+              <p id="galat-email" class="galat"></p>
+            </div>
+
+            <div class="kolom">
+              <label for="password">Password</label>
+              <input
+                id="password"
+                name="password"
+                type="password"
+                autocomplete="current-password"
+                required
+                minlength="8"
+                aria-describedby="galat-password"
+              >
+              <p id="galat-password" class="galat"></p>
+            </div>
+
+            <button class="tombol tombol-utama" type="submit">Masuk</button>
+            <p id="status-masuk" class="status" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer: informasi hak cipta dan tautan navigasi -->
+    <footer class="situs-footer">
+      <div class="wadah footer-dalam">
+        <p>© 2026 KantinKu. Dibuat untuk Tugas 2 FrontendLab.</p>
+        <nav aria-label="Tautan footer">
+          <a href="#menu">Menu</a>
+          <a href="#keranjang">Keranjang</a>
+          <a href="#masuk">Masuk</a>
+        </nav>
+      </div>
+    </footer>
+
+    <!-- Dialog konfirmasi sebelum mengosongkan keranjang -->
+    <dialog
+      id="dialog-kosongkan"
+      class="dialog"
+      aria-labelledby="judul-dialog"
+      aria-describedby="deskripsi-dialog"
+    >
+      <h2 id="judul-dialog">Kosongkan keranjang?</h2>
+      <p id="deskripsi-dialog">
+        Semua menu yang sudah dipilih akan dihapus. Tindakan ini tidak bisa
+        diurungkan.
+      </p>
+      <div class="dialog-aksi">
+        <button id="tidak" class="tombol tombol-sekunder" type="button">Tidak</button>
+        <button id="ya" class="tombol tombol-bahaya" type="button">
+          Ya, kosongkan
+        </button>
+      </div>
+    </dialog>
+
+    <script src="script.js"></script>
+  </body>
+</html>
