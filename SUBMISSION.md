@@ -1,11 +1,11 @@
 # Isi Form Tugas 2 — FrontendLab
 
-Ganti `USERNAME` dengan nama pengguna GitHub kamu, lalu salin isi yang sesuai ke form pengumpulan.
+Tautan di bawah sudah disesuaikan dengan akun GitHub kamu. Salin isi yang sesuai ke form pengumpulan.
 
 ## Repositori
 
-- **Tautan repo GitHub (publik):** `https://github.com/USERNAME/kantinku-tugas-2`
-- **Tautan GitHub Pages / demo (opsional):** `https://USERNAME.github.io/kantinku-tugas-2/`
+- **Tautan repo GitHub (publik):** `https://github.com/arhillis9/kantinku-tugas-2`
+- **Tautan GitHub Pages / demo (opsional):** `https://arhillis9.github.io/kantinku-tugas-2/`
 - **Halaman wireframe Tugas 1 yang diimplementasikan:** KantinKu — halaman pemesanan makanan kampus
 
 ## Komponen 1
@@ -50,29 +50,19 @@ Tantangan utama adalah menjaga state keranjang tetap sinkron dengan tampilan dan
 
 ## Checklist sebelum mengumpulkan
 
-1. Buat repo GitHub **publik** dengan nama, misalnya, `kantinku-tugas-2`.
-2. Unggah isi folder `tugas-2` sehingga `index.html` berada di **folder akar** repo.
-3. Aktifkan GitHub Pages dari branch `main` dan folder `/ (root)` bila ingin demo.
-4. Ganti semua placeholder `USERNAME` di atas.
-5. Isi form pengumpulan, pilih pernyataan penggunaan AI dengan jujur, lalu kumpulkan.
+1. Repo GitHub **publik** sudah dibuat: `https://github.com/arhillis9/kantinku-tugas-2`.
+2. `index.html` sudah berada di **folder akar** repo.
+3. GitHub Pages sudah diaktifkan dari branch `main` dan folder `/ (root)`.
+4. Isi form pengumpulan memakai tautan repo dan demo di atas.
+5. Pilih pernyataan penggunaan AI dengan jujur, lalu kumpulkan.
 6. Jika pemeriksaan otomatis memberi catatan, perbaiki dan kumpulkan ulang sebelum tenggat.
 
-## Perintah git (opsional)
+## Perintah git untuk update berikutnya
 
-Jalankan dari folder `tugas-2` setelah repo GitHub publik dibuat:
+Repo lokal sudah terhubung ke GitHub. Setelah mengubah file, jalankan dari folder `tugas-2`:
 
 ```bash
-git init
 git add .
-git commit -m "Tugas 2: Implementasi komponen dasar KantinKu"
-git branch -M main
-git remote add origin https://github.com/USERNAME/kantinku-tugas-2.git
-git push -u origin main
-```
-
-Jika `git` meminta identitas, atur sekali dengan:
-
-```bash
-git config --global user.name "Nama Kamu"
-git config --global user.email "email@contoh.com"
+git commit -m "Perbarui proyek Tugas 2"
+git push
 ```
